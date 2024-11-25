@@ -10,14 +10,30 @@
 		674D0C192CF4D9CE008C72D6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 674D0C182CF4D9CE008C72D6 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		674D0C4E2CF518EB008C72D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 674D0BEA2CF4CDE0008C72D6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 674D0BF12CF4CDE0008C72D6;
+			remoteInfo = AnhDinhTakeHomeExercise;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		674D0BF22CF4CDE0008C72D6 /* AnhDinhTakeHomeExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnhDinhTakeHomeExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		674D0C4A2CF518EA008C72D6 /* TakeHomeExerciseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TakeHomeExerciseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		674D0BF42CF4CDE0008C72D6 /* AnhDinhTakeHomeExercise */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = AnhDinhTakeHomeExercise;
+			sourceTree = "<group>";
+		};
+		674D0C4B2CF518EB008C72D6 /* TakeHomeExerciseTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = TakeHomeExerciseTests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -31,6 +47,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		674D0C472CF518EA008C72D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -38,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				674D0BF42CF4CDE0008C72D6 /* AnhDinhTakeHomeExercise */,
+				674D0C4B2CF518EB008C72D6 /* TakeHomeExerciseTests */,
 				674D0BF32CF4CDE0008C72D6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				674D0BF22CF4CDE0008C72D6 /* AnhDinhTakeHomeExercise.app */,
+				674D0C4A2CF518EA008C72D6 /* TakeHomeExerciseTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,6 +101,29 @@
 			productReference = 674D0BF22CF4CDE0008C72D6 /* AnhDinhTakeHomeExercise.app */;
 			productType = "com.apple.product-type.application";
 		};
+		674D0C492CF518EA008C72D6 /* TakeHomeExerciseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 674D0C502CF518EB008C72D6 /* Build configuration list for PBXNativeTarget "TakeHomeExerciseTests" */;
+			buildPhases = (
+				674D0C462CF518EA008C72D6 /* Sources */,
+				674D0C472CF518EA008C72D6 /* Frameworks */,
+				674D0C482CF518EA008C72D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				674D0C4F2CF518EB008C72D6 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				674D0C4B2CF518EB008C72D6 /* TakeHomeExerciseTests */,
+			);
+			name = TakeHomeExerciseTests;
+			packageProductDependencies = (
+			);
+			productName = TakeHomeExerciseTests;
+			productReference = 674D0C4A2CF518EA008C72D6 /* TakeHomeExerciseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -88,6 +136,10 @@
 				TargetAttributes = {
 					674D0BF12CF4CDE0008C72D6 = {
 						CreatedOnToolsVersion = 16.1;
+					};
+					674D0C492CF518EA008C72D6 = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = 674D0BF12CF4CDE0008C72D6;
 					};
 				};
 			};
@@ -109,12 +161,20 @@
 			projectRoot = "";
 			targets = (
 				674D0BF12CF4CDE0008C72D6 /* AnhDinhTakeHomeExercise */,
+				674D0C492CF518EA008C72D6 /* TakeHomeExerciseTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		674D0BF02CF4CDE0008C72D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		674D0C482CF518EA008C72D6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -131,7 +191,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		674D0C462CF518EA008C72D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		674D0C4F2CF518EB008C72D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 674D0BF12CF4CDE0008C72D6 /* AnhDinhTakeHomeExercise */;
+			targetProxy = 674D0C4E2CF518EB008C72D6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		674D0BFE2CF4CDE2008C72D6 /* Debug */ = {
@@ -311,6 +386,42 @@
 			};
 			name = Release;
 		};
+		674D0C512CF518EB008C72D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L6M78ZXF68;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.anhdinh.TakeHomeExerciseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnhDinhTakeHomeExercise.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AnhDinhTakeHomeExercise";
+			};
+			name = Debug;
+		};
+		674D0C522CF518EB008C72D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L6M78ZXF68;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.anhdinh.TakeHomeExerciseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnhDinhTakeHomeExercise.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AnhDinhTakeHomeExercise";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -328,6 +439,15 @@
 			buildConfigurations = (
 				674D0C012CF4CDE2008C72D6 /* Debug */,
 				674D0C022CF4CDE2008C72D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		674D0C502CF518EB008C72D6 /* Build configuration list for PBXNativeTarget "TakeHomeExerciseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				674D0C512CF518EB008C72D6 /* Debug */,
+				674D0C522CF518EB008C72D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
