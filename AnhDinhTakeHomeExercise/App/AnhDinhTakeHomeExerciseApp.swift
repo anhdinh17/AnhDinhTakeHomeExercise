@@ -11,7 +11,8 @@ import SwiftUI
 struct AnhDinhTakeHomeExerciseApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            let service = NetworkService()
+            ContentView(service: service)
         }
     }
 }
