@@ -11,7 +11,7 @@ struct ContentView: View {
     @StateObject var viewModel: ContentViewModel
     @State var showAlert = false
     
-    init(service: NetworkService) {
+    init(service: NetworkServiceProtocol) {
         self._viewModel = StateObject(wrappedValue: ContentViewModel(service: service))
     }
     
@@ -19,7 +19,7 @@ struct ContentView: View {
         NavigationStack {
             ZStack {
                 List {
-                    ForEach(viewModel.recipesList ?? []) { recipe in
+                    ForEach(viewModel.recipesList) { recipe in
                         RecipeView(recipe: recipe)
                     }
                 }
@@ -27,8 +27,6 @@ struct ContentView: View {
                 // Alert
                 if let error = viewModel.recipeError {
                     AlertView(viewModel: self.viewModel, error: error)
-                } else if viewModel.recipesList?.count == 0 {
-                    AlertView(viewModel: self.viewModel, error: .emptyData)
                 }
             }
         }
@@ -39,17 +37,9 @@ struct ContentView: View {
         .task {
             await viewModel.fetchRecipes()
         }
-//        .onChange(of: viewModel.errorMessage) { oldValue, newValue in
-//            if newValue != nil {
-//                showAlert = true
-//            }
-//        }
-//        .alert("Alert", isPresented: $showAlert) {
-//            
-//        }
     }
 }
 
 #Preview {
-    ContentView(service: NetworkService())
+    ContentView(service: MockNetworkService())
 }

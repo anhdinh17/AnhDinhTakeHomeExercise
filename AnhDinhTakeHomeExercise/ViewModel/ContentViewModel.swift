@@ -8,11 +8,11 @@
 import Foundation
 
 class ContentViewModel: ObservableObject {
-    @Published var recipesList: [RecipesDetails]?
+    @Published var recipesList: [RecipesDetails] = []
     @Published var recipeError: RecipeError?
-    private let service: NetworkService
+    private let service: NetworkServiceProtocol
     
-    init(service: NetworkService) {
+    init(service: NetworkServiceProtocol) {
         self.service = service
     }
     
@@ -20,9 +20,7 @@ class ContentViewModel: ObservableObject {
     func fetchRecipes() async {
         print("DEBUG: Fetch Data")
         do {
-            if let recipesList = try await service.fetchRecipes() {
-                self.recipesList = recipesList
-            }
+            self.recipesList = try await service.fetchRecipes() 
         } catch {
             guard let error = error as? RecipeError else { return }
             self.recipeError = error
@@ -30,6 +28,7 @@ class ContentViewModel: ObservableObject {
     }
     
     func refresh() async {
+        self.recipeError = nil
         await self.fetchRecipes()
     }
     

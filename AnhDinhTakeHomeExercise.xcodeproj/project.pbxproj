@@ -25,6 +25,16 @@
 		674D0C4A2CF518EA008C72D6 /* TakeHomeExerciseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TakeHomeExerciseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		674D0C5A2CF51EFF008C72D6 /* Exceptions for "TakeHomeExerciseTests" folder in "AnhDinhTakeHomeExercise" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				TestData.swift,
+			);
+			target = 674D0BF12CF4CDE0008C72D6 /* AnhDinhTakeHomeExercise */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		674D0BF42CF4CDE0008C72D6 /* AnhDinhTakeHomeExercise */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
@@ -33,6 +43,9 @@
 		};
 		674D0C4B2CF518EB008C72D6 /* TakeHomeExerciseTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				674D0C5A2CF51EFF008C72D6 /* Exceptions for "TakeHomeExerciseTests" folder in "AnhDinhTakeHomeExercise" target */,
+			);
 			path = TakeHomeExerciseTests;
 			sourceTree = "<group>";
 		};

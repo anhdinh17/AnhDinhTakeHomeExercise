@@ -23,7 +23,7 @@ struct RecipeView: View {
                     .font(.subheadline)
                 
                 if let youtubeUrl = recipe.youtubeUrl {
-                    Link("Video", destination: URL(string: recipe.youtubeUrl ?? "")!)
+                    Link("Video", destination: URL(string: youtubeUrl)!)
                         .font(.footnote)
                         .fontWeight(.semibold)
                         .foregroundStyle(.white)
@@ -31,19 +31,6 @@ struct RecipeView: View {
                         .background(.pink)
                         .clipShape(RoundedRectangle(cornerRadius: 3))
                 }
-
-                
-                //                Button {
-                //                    // Go to Youtube
-                //                } label: {
-                //                    Text("Video")
-                //                        .font(.footnote)
-                //                        .fontWeight(.semibold)
-                //                        .foregroundStyle(.white)
-                //                        .padding(.horizontal)
-                //                        .background(.pink)
-                //                        .clipShape(RoundedRectangle(cornerRadius: 3))
-                //                }
             }
         }
     }

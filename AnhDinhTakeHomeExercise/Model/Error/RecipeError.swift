@@ -7,22 +7,16 @@
 
 import Foundation
 
-enum RecipeError: Error {
-    case invalidData
-    case jsonParsingFailure
-    case requestFailed(description: String)
+enum RecipeError: Error, Equatable {
+    case requestFailed
     case invalidStatusCode(statusCode: Int)
     case emptyData
     case unknownError
     
     var customDescription: String {
         switch self {
-        case .invalidData:
-            return "Invalid Data"
-        case .jsonParsingFailure:
-            return "Failed to parse JSON"
-        case .requestFailed(let description):
-            return "Request failed: \(description)"
+        case .requestFailed:
+            return "Unable to make your request at this time."
         case .invalidStatusCode(let statusCode):
             return "Invalid status code: \(statusCode)"
         case .emptyData:
