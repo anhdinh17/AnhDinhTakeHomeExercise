@@ -3,7 +3,7 @@ Use Xcode to run the app.
 Users can pull down the list to refresh data.
 
 ### Focus Areas: What specific areas of the project did you prioritize? Why did you choose to focus on these areas?
-I focus on Architecture which is Dependency Injection that I use in this app.
+I focus on Architecture which is Dependency Injection and MVVM that I use in this app.
 I use this pattern because I want to make my app scalable, and testable.
 
 ### Time Spent: Approximately how long did you spend working on this project? How did you allocate your time?
