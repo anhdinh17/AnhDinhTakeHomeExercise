@@ -18,21 +18,18 @@ class ContentViewModel: ObservableObject {
     
     @MainActor
     func fetchRecipes() async {
-        print("DEBUG: Fetch Data")
         do {
-            self.recipesList = try await service.fetchRecipes() 
+            self.recipesList = try await service.fetchRecipes()
         } catch {
             guard let error = error as? RecipeError else { return }
             self.recipeError = error
         }
     }
     
+    @MainActor
     func refresh() async {
         self.recipeError = nil
+        self.recipesList.removeAll()
         await self.fetchRecipes()
-    }
-    
-    func testRefresh() {
-        print("DEBUG: Refresh Data")
     }
 }

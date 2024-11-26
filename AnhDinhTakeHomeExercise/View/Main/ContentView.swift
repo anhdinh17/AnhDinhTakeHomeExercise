@@ -17,16 +17,9 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
-            ZStack {
-                List {
-                    ForEach(viewModel.recipesList) { recipe in
-                        RecipeView(recipe: recipe)
-                    }
-                }
-                
-                // Alert
-                if let error = viewModel.recipeError {
-                    AlertView(viewModel: self.viewModel, error: error)
+            List {
+                ForEach(viewModel.recipesList) { recipe in
+                    RecipeView(recipe: recipe)
                 }
             }
         }
@@ -36,6 +29,20 @@ struct ContentView: View {
         }
         .task {
             await viewModel.fetchRecipes()
+        }
+        .onChange(of: viewModel.recipeError, {
+            showAlert = viewModel.recipeError != nil
+        })
+        .alert("Alert", isPresented: $showAlert) {
+            Button{
+                // Refetch
+                Task { await viewModel.refresh() }
+            } label: {
+                Text("Refresh")
+                    .fontWeight(.semibold)
+            }
+        } message: {
+            Text("\(viewModel.recipeError?.customDescription ?? "")")
         }
     }
 }
